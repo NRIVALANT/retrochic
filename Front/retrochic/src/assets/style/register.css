@@ -1,4 +1,4 @@
-.login-page{
+.register-page{
     background-color: #ffeed3;
     width: 30%;
     display: flex;
@@ -12,24 +12,24 @@
     padding: 20px;
 }
 
-.login-page p a {
+.register-page p a {
     text-decoration: none;
     color: #d6955B;
 }
 
-.login-page p a:hover {
+.register-page p a:hover {
     color: #3c5c2d;
     font-weight: 600;
 }
 
-.login-page-form {
+.register-page-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.login-page-form-input-text {
+.register-page-form-input-text {
     width: 200px;
     height: 30px;
     border: none;
@@ -38,7 +38,7 @@
     font-size: 1rem;
 }
 
-.login-page-form-input-password {
+.register-page-form-input-password {
     width: 200px;
     height: 30px;
     border: none;
@@ -48,7 +48,7 @@
     margin-top: 10%;
 }
 
-.login-page-form-btn-submit{
+.register-page-form-btn-submit{
     background-color: #d6955B;
     font-weight: 600;
     border: 0;
@@ -58,7 +58,7 @@
     margin-top: 10%;
 }
 
-.login-page-form-btn-submit:hover {
+.register-page-form-btn-submit:hover {
     background-color: #d6955B;
     color: #3c5c2d;
     font-weight: 600;

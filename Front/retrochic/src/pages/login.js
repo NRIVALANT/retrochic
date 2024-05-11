@@ -5,14 +5,14 @@ function Login() {
     return (
         <div>
             <div className="login-page">
-                <h1>Login</h1>
-                <form>
-                    <input type="text" placeholder="Username" />
-                    <input type="password" placeholder="Password" />
-                    <button type="submit">Login</button>
+                <h1>Connexion</h1>
+                <form className='login-page-form'>
+                    <input className='login-page-form-input-text' type="text" placeholder="Email" />
+                    <input className='login-page-form-input-password' type="password" placeholder="Password" />
+                    <button className='login-page-form-btn-submit' type="submit">Se connecter</button>
                 </form>
                 <p>
-                    Don't have an account? <a href="/register">Register</a>
+                    Vous n'avez pas de compte ? <a href="/register">S'enregistrer</a>
                 </p>
             </div>
         </div>

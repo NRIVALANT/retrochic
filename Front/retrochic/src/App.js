@@ -5,6 +5,7 @@ import Catalogue from './pages/catalogue';
 import About from './pages/about';
 // import Shop from './pages/shop';
 import Login from './pages/login';
+import Register from './pages/register';
 // import Header from './components/header';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" component={About} />
         {/* <Route path="/shop" component={Shop} /> */}
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   </>
