@@ -15,6 +15,9 @@ function Home() {
               Avec leur expertise en développement, Nicolas et Jules ont décidé de créer un site web convivial où les gens pouvaient acheter et les friperies mettre en vente des vêtements de seconde main. Ils ont nommé leur site "RetroChic".
               </p>
           </div>
+          <button className='btn-add-product'>
+            <a href='/popup'>Add a product</a>
+          </button>
           <div className='home-page-card'>
             <Card />
             <Card />
