@@ -38,3 +38,30 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.btn-add-product {
+    width: 10%;
+    height: 10%;
+    border: 0;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #3c5c2d;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.btn-add-product a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.btn-add-product:hover {
+    background-color: #476d36;
+    color: white;
+}
