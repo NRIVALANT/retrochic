@@ -6,19 +6,21 @@ import About from './pages/about';
 import Shop from './pages/shop';
 import Login from './pages/login';
 import Register from './pages/register';
-// import Header from './components/header';
+import { AuthProvider } from '../src/context/AuthProvider';
 
 function App() {
   return (<>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/catalogue" component={Catalogue} />
-        <Route path="/about" component={About} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/catalogue" component={Catalogue} />
+          <Route path="/about" component={About} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   </>
   );
