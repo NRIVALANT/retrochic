@@ -2,13 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const uri = process.env.MONGODB_URI;
-const router = require('./routes/users');
+const routes = require('./routes');
 
 const app = express(); 
 const port = process.env.PORT; 
 
 app.use(express.json());
-app.use("/users", router)
+app.use('/users', routes.usersRoutes);
+app.use('/products', routes.productsRoutes);
 
 mongoose
     .connect(uri)
