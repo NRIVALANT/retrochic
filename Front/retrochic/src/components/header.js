@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../assets/style/header.css';
 import shop from '../assets/shop.png';
 import login from '../assets/login.png';
+import Logo from '../assets/Logo.png';
 
 function Header() {
     const [search, setSearch] = useState('');
@@ -28,7 +29,7 @@ function Header() {
             <a href="/catalogue">Catalogue</a>
           </li>
           <li>
-            <img src="https://via.placeholder.com/75" alt="logo" />
+            <img className="header-logo" src={Logo} alt="logo" />
           </li> 
           <li>
             <a href="/about">About</a>
