@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import Catalogue from './pages/catalogue';
 import About from './pages/about';
+import Popup from './pages/popup';
 import Shop from './pages/shop';
 import Login from './pages/login';
 import Register from './pages/register';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/catalogue" component={Catalogue} />
           <Route path="/about" component={About} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/popup" element={<Popup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>

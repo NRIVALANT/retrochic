@@ -1,0 +1,28 @@
+.popup-inner {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-popup-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.form-popup-inner input {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
