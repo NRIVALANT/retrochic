@@ -1,4 +1,4 @@
-const user = require('../models/users');
+const User = require('../models/users');
 const bcrypt = require('bcrypt');
 const { json } = require('express');
 const jwt = require('jsonwebtoken');
@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 exports.createUser = async (req, res) => {
     try {
         const { name, lastName, email, password } = req.body;
-        const newUser = new user({ name, lastName, email, password });
+        const newUser = new User({ name, lastName, email, password });
         const salt = await bcrypt.genSalt(10);
         newUser.password = await bcrypt.hash(password, salt);
         await newUser.save();
@@ -22,7 +22,7 @@ exports.createUser = async (req, res) => {
 exports.loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
-        const user = await user
+        const user = await User
             .findOne({ email })
             .select('+password');
         if (!user) {
@@ -42,9 +42,10 @@ exports.loginUser = async (req, res) => {
 
 exports.getUser = async (req, res) => {
     try {
-        const user = await user
+        const user = await User
             .findById(req.user.id)
             .select('-password');
+        res.json(user);
     }
     catch (error) {
         res.status(400).json({ error: error.message });
@@ -53,7 +54,7 @@ exports.getUser = async (req, res) => {
 
 exports.updateUser = async (req, res) => {
     try {
-        const user = await user
+        const user = await User
             .findByIdAndUpdate(req.user.id
                 , req.body
                 , { new: true });
@@ -66,7 +67,7 @@ exports.updateUser = async (req, res) => {
 
 exports.deleteUser = async (req, res) => {
     try {
-        await user.findByIdAndDelete(req.user.id);
+        await User.findByIdAndDelete(req.user.id);
         res.json({ message: 'User deleted' });
     }
     catch (error) {
