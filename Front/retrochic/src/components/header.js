@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import '../assets/style/header.css';
 import shop from '../assets/shop.png';
-import login from '../assets/login.png';
+import login from '../assets/login.png;
 import Logo from '../assets/Logo.png';
 
 function Header() {
@@ -30,6 +30,7 @@ function Header() {
           </li>
           <li>
             <img className="header-logo" src={Logo} alt="logo" />
+            <img src={logo} alt="logo" />
           </li> 
           <li>
             <a href="/about">About</a>
