@@ -1,12 +1,24 @@
 const express = require('express'); 
-  
+const mongoose = require('mongoose');
+require('dotenv').config();
+const uri = process.env.MONGODB_URI;
+const routes = require('./routes');
+
 const app = express(); 
-const PORT = 3000; 
-  
-app.listen(PORT, (error) =>{ 
-    if(!error) 
-        console.log("Server is Successfully Running, and App is listening on port "+ PORT) 
-    else 
-        console.log("Error occurred, server can't start", error); 
-    } 
-); 
+const port = process.env.PORT; 
+
+app.use(express.json());
+app.use('/users', routes.usersRoutes);
+app.use('/products', routes.productsRoutes);
+
+mongoose
+    .connect(uri)
+    .then(() => {
+        console.log('Connected to MongoDB');
+        app.listen(port, () => {
+            console.log(`Server is running on port ${port}`);
+        });
+    })
+    .catch((error) => {
+        console.error(error.message);
+    });
