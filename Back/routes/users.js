@@ -7,6 +7,7 @@ const auth = require('../middleware/authenticateToken');
 Router.post('/addUser', userController.createUser);
 Router.post('/login', userController.loginUser);
 Router.get('/getUser/:id',auth , userController.getUser);
+Router.get('/currentUser',auth , userController.getCurrentUser);
 Router.put('/updateUser/:id',auth , userController.updateUser);
 Router.delete('/deleteUser/:id',auth , userController.deleteUser);
 

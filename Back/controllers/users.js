@@ -52,6 +52,19 @@ exports.getUser = async (req, res) => {
     }
 }
 
+exports.getCurrentUser = async (req, res) => {
+    try {
+        const user = await User
+            .findById(req.user.id)
+            .select('-password');
+        res.json(user);
+    }
+    catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+
+}
+
 exports.updateUser = async (req, res) => {
     try {
         const user = await User
