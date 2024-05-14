@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import '../assets/style/header.css';
 import shop from '../assets/shop.png';
-import login from '../assets/login.png';
-import logo from '../assets/loog.png';
+import login from '../assets/login.png;
+import Logo from '../assets/Logo.png';
 
 function Header() {
     const [search, setSearch] = useState('');
@@ -29,6 +29,7 @@ function Header() {
             <a href="/catalogue">Catalogue</a>
           </li>
           <li>
+            <img className="header-logo" src={Logo} alt="logo" />
             <img src={logo} alt="logo" />
           </li> 
           <li>
